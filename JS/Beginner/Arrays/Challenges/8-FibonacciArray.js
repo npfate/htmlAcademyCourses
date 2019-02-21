@@ -2,10 +2,14 @@ var fibonacciNumbers = [1, 1];
 var numbersQuantity = 7;
 
 for (var i = 1; i <= numbersQuantity; i++) {
-  fibonacciNumbers.push(fibonacciNumbers[i] + fibonacciNumbers[i-1]);
+  fibonacciNumbers[fibonacciNumbers.length] = fibonacciNumbers[fibonacciNumbers.length - 2] + fibonacciNumbers[fibonacciNumbers.length - 1];
 }
 
 console.log(fibonacciNumbers);
+
+// for (var i = 1; i <= numbersQuantity; i++) {
+//   fibonacciNumbers.push(fibonacciNumbers[i] + fibonacciNumbers[i-1]);
+// }
 
 /* Техническое задание
 
