@@ -1,13 +1,16 @@
 var calculateMiles = function (distance, isBusinessClass) {
+  var percent = 0.18;
   if (isBusinessClass) {
-    return distance * 0.22;
-  } else {
-    return distance * 0.18;
+    percent += 0.04;
   }
+  if (distance > 3500) {
+    percent += 0.15;
+  }
+  return distance * percent;
 };
 
-var milesEconom = calculateMiles(3000, false);
-var milesBusiness = calculateMiles(3000, true);
+var milesEconom = calculateMiles(10000, false);
+var milesBusiness = calculateMiles(10000, true);
 
-console.log('Эконом-классом Кексофлота накопишь ' + milesEconom + ' миль');
-console.log('Бизнес-классом Кексофлота накопишь ' + milesBusiness + ' миль');
+console.log('Эконом-классом Кексфолота накопишь ' + milesEconom + ' миль');
+console.log('Бизнес-классом Кексфолота накопишь ' + milesBusiness + ' миль');
