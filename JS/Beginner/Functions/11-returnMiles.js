@@ -6,4 +6,8 @@ var calculateMiles = function (distance, isBusinessClass) {
   }
 };
 
-console.log(calculateMiles(10000, true));
+var milesEconom = calculateMiles(3000, false);
+var milesBusiness = calculateMiles(3000, true);
+
+console.log('Эконом-классом Кексофлота накопишь ' + milesEconom + ' миль');
+console.log('Бизнес-классом Кексофлота накопишь ' + milesBusiness + ' миль');
