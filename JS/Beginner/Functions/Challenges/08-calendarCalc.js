@@ -1,29 +1,39 @@
-var getDayOfWeek = function (weekday, chosenDay) {
-  var days = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
-  var daysArr = [];
-  
-  if (chosenDay < 1 || chosenDay > 31) {
-    return 'введите значение от 1 до 31';
-  }
-  
-  for (var i = 0; i < days.length; i++) {
-    var shift = days.indexOf(weekday) + i;
-    if (shift < days.length) {
-      daysArr.push(days[shift]);
-    } else {
-      daysArr.push(days[shift - days.length]);
-    }
-    for (var j = 0; j < chosenDay; j++) {
-      if (chosenDay > days.length) {
-        chosenDay -= days.length;  
-      }
-    }
-  }
-  console.log(daysArr);
-  return daysArr[chosenDay - 1];
-}
+var days = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']
 
-getDayOfWeek('суббота', 1);
+var getDayOfWeek = function(weekday, chosenDay) {
+  var day = chosenDay + days.indexOf(weekday) - 1;
+  return days[day % days.length];
+};
+getDayOfWeek('четверг', 20);
+
+// var days = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+
+// var getDayOfWeek = function (weekday, chosenDay) {
+//   var daysArr = [];
+  
+//   if (chosenDay < 1 || chosenDay > 31) {
+//     return 'введите значение от 1 до 31';
+//   }
+  
+//   for (var i = 0; i < days.length; i++) {
+//     var shift = days.indexOf(weekday) + i;
+//     if (shift < days.length) {
+//       daysArr.push(days[shift]);
+//     } else {
+//       daysArr.push(days[shift - days.length]);
+//     }
+//     for (var j = 0; j < chosenDay; j++) {
+//       if (chosenDay > days.length) {
+//         chosenDay -= days.length;  
+//       }
+//     }
+//   }
+//   console.log(daysArr);
+//   return daysArr[chosenDay - 1];
+// }
+
+// getDayOfWeek('суббота', 1)
+
 
 /* Техническое задание
 
