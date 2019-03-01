@@ -13,7 +13,7 @@ var house = {
     let houseSquare = this.rooms * this.coefficient * this.floors;
     return houseSquare;
   },
-  calculatePrice: function(name) {
+  calculatePrice: function() {
     let priceOverall = this.calculateSquare() * materialPrice[this.material];
     return priceOverall;
   }
