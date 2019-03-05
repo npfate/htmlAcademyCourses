@@ -46,8 +46,9 @@ var makeElement = function (tagName, className, text) {
   return element;
 };
 
-var renderCards = function (card) {
+var createCard = function (card) {
   var listItem = makeElement('li', 'good'); 
+  
   var title = makeElement('h2', 'good__description', card.text);
   listItem.appendChild(title);
   
@@ -67,12 +68,8 @@ var renderCards = function (card) {
   
   if (card.isHit) {
     listItem.classList.add('good--hit');
-    
-    if (card.specialOffer) { 
-      var specialOff = makeElement('p', 'good__special-offer');
-      specialOff.textContent = card.specialOffer;
-      listItem.appendChild(specialOff);
-    }
+    var specialOff = makeElement('p', 'good__special-offer', card.specialOffer);
+    listItem.appendChild(specialOff);
   }    
     
   return listItem;
@@ -80,10 +77,15 @@ var renderCards = function (card) {
 
 var cardList = document.querySelector('.goods');
 
-for (var i = 0; i < cardsData.length; i++) {
-  var cardItem = renderCards(cardsData[i]);
-  cardList.appendChild(cardItem);
-}
+var renderCards = function (cards) {
+  for (var i = 0; i < cards.length; i++) {
+    var cardItem = createCard(cards[i]);
+    cardList.appendChild(cardItem);
+  }
+};
+
+renderCards(cardsData);
+
 
 /* Техническое задание
 
