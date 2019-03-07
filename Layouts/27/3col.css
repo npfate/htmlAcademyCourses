@@ -48,24 +48,26 @@ p {
 
 .menu {
   margin-top: 10px;
-  min-height: 35px;
   background-color: #3498db;  
+}
+
+.menu__textBlock {
+  min-height: 35px;
 }
 
 .promo-section {
   margin-top: 10px;
 }
 
-.promo {
+.promo-column {
   float: left;
-  margin-right: 10px;
   width: 170px;
   min-height: 60px;
   background-color: #c0392b;
 }
 
-.promo:last-child {
-  margin-right: 0;  
+.promo-column:last-child {
+  float: right;  
 }
 
 .main {
@@ -89,9 +91,12 @@ p {
 }
 
 .footer {
-  margin-top: 10px;
-  min-height: 35px;
+  margin-top: 10px;  
   background-color: #34495e;
+}
+
+.footer__textBlock {
+  min-height: 35px;
 }
 
 /*
