@@ -1,0 +1,75 @@
+/* Используемые цвета:
+
+#777777
+#ffffff
+#fffebc - yellow
+#b2fdd0 - green
+#ffbaba - red
+
+*/
+
+.formula {
+  display: table; /* аналог <table> */  
+  margin: 10px;
+  width: 500px;
+  border-collapse: collapse;
+}
+
+.formula p {
+  display: table-caption; /* аналог <caption> */
+  caption-side: bottom;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.formula .column-group {
+  display: table-column-group; /* аналог <colgroup> */
+  background-color: #b2fdd0;
+}
+
+.formula .column {
+  display: table-column; /* аналог <col> */
+  border: 1px solid #777777;
+}
+
+.formula .column-last {
+  background-color: #ffbaba;
+}
+
+.formula .content {
+  display: table-row-group; /* аналог <tbody> */
+}
+
+.formula .content ul {
+  display: table-row; /* аналог <tr> */
+  border: 1px solid #777777;
+}
+
+.formula .content ul li {
+  display: table-cell; /* аналог <td> */
+  padding: 5px; 
+  text-align: center;
+  vertical-align: middle;
+}
+
+.formula header {
+  display: table-header-group; /* аналог <thead> */
+  background-color: #ffffff;
+}
+
+.formula header ul {
+  display: table-row; /* аналог <tr> */
+}
+
+.formula header li {
+  display: table-cell; /* аналог <td> */
+  padding: 5px;  
+  text-align: center;
+  vertical-align: middle;
+}
+
+.formula .content-important {
+  background-color: #fffebc;
+}
