@@ -7,7 +7,6 @@ body {
 body {
   width: 450px;
   height: 335px;
-
   font-size: 10px;
   font-family: "Arial", sans-serif;
   color: white;
@@ -88,7 +87,6 @@ p {
 .col:nth-child(2) {
   width: 190px
 }
-
 
 .footer {
   margin-top: 10px;
