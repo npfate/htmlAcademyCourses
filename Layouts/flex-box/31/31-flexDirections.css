@@ -1,0 +1,67 @@
+.palette-small {
+  display: flex;  
+}
+
+.palette-box:nth-child(1) .palette-small {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.palette-box:nth-child(1) .color-3 {
+  order: -2;
+}
+
+.palette-box:nth-child(1) .color-2 {
+  align-self: stretch;
+}
+
+.palette-box:nth-child(1) .color-5 {
+  order: -1;
+  align-self: stretch;
+}
+
+.palette-box:nth-child(2) .palette-small {  
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-end;  
+}
+
+.palette-box:nth-child(2) .color-6 ~ div {  
+  align-self: flex-start; 
+}
+
+.palette-box:nth-child(3) .palette-small {  
+  justify-content: space-between;
+}
+
+.palette-box:nth-child(3) .palette-small .part {  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.palette-box:nth-child(4) .palette-small {
+  justify-content: space-between;
+}
+
+.palette-box:nth-child(4) .palette-small .part {  
+  display: flex;
+}
+
+.palette-box:nth-child(4) .palette-small .part:last-child {  
+  flex-flow: column-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+/*
+color-1 — черный
+color-2 — голубой
+color-3 — зеленый
+color-4 — желтый
+color-5 — бордовый
+color-6 — розовый
+color-7 — сиреневый
+*/
