@@ -1,0 +1,23 @@
+.palette {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  align-content: center;
+}
+
+/*темно-синий*/
+.color-1 {
+  order: 3; 
+}
+
+/*зеленый*/
+.color-3 { 
+  order: 2;
+}
+
+/*бордовый*/
+.color-5 {
+  order: 1;
+}
