@@ -1,0 +1,37 @@
+.brick-layout {
+  display: flex;
+  box-sizing: content-box;
+  padding: 5px;
+  width: 300px;
+}
+
+.brick {
+  min-width: 0;
+  height: 100px;
+}
+
+.brick-1,
+.brick-2,
+.brick-3 {
+  flex-basis: 25px;
+}
+
+.brick-1 {flex-grow: 1;}
+.brick-2 {flex-grow: 3;}
+.brick-3 {flex-grow: 5;}
+
+.brick-4 {
+  flex-basis: 200px;
+}
+
+.brick-5 {
+  flex-basis: 400px;
+}
+
+.brick-6 {
+  flex-basis: 200px;
+}
+
+.brick-4 {flex-shrink: 1;}
+.brick-5 {flex-shrink: 3;}
+.brick-6 {flex-shrink: 3;}
