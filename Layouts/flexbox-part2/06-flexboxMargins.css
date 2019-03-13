@@ -1,0 +1,30 @@
+.palette {
+  display: flex;
+  /*justify-content: space-between;*/
+}
+
+.palette div {
+  min-width: 35px;
+  min-height: 35px;
+}
+
+.color-olive { 
+  height: 150px;
+  margin: auto 5px auto auto;
+}
+
+.color-yellow {
+  height: 100px;
+  margin: auto auto 5px 5px;
+}
+
+.color-fuchsia {
+  height: 100px;
+  margin: 5px 5px auto 5px;
+}
+
+.color-aqua {
+  height: 150px;
+  margin: auto auto auto 5px;
+  flex-basis: 50px;
+}
