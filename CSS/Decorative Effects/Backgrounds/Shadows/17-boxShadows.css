@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0px;
+  padding: 0;
+  width: 300px;
+  background-color: #ecf0f1;
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+}
+
+.btn {
+  display: block;
+  margin: 0 25px;
+  margin-top: 100px;
+  padding: 20px 0;
+  width: 250px;
+  border: none;
+  box-sizing: content-box;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font: inherit;
+  line-height: 20px;  
+  box-shadow: 
+    0px 5px 0 0px #16a085 inset,/*темно-зеленый*/
+    0px -5px 0 0px #16a085 inset, /*светло-зеленый*/    
+    0 20px 0 -10px #2980b9,/*темно-синий*/
+    0 40px 0 -20px #3498db,/*светло-синий*/
+    0 -20px 0 -10px #c0392b,/*темно-красный*/
+    0 -40px 0 -20px #e74c3c /*светло-красный*/
+    ;
+}
+.help {
+  width: 125px;
+  height: 5px;
+  margin: 0 25px;
+  box-shadow: 125px -5px 0 0 #2ecc71,
+              0 -60px 0 0 #2ecc71;
+}
