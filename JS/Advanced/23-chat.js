@@ -1,3 +1,38 @@
+// Контейнер для сообщений
+let chatContainer = document.querySelector('.chat-content');
+
+// Форма и поле ввода текста
+let newMessageForm = document.querySelector('.chat-form');
+let newMessageInput = newMessageForm.querySelector('.chat-form-input');
+
+// Шаблон для сообщения
+let messageTemplate = document.querySelector('#message-template').content;
+let newMessageTemplate = messageTemplate.querySelector('.chat-message');
+
+// Удаление сообщения по крестику
+let deleteMessageHandler = function(button, item) {
+  button.addEventListener('click', function() {
+    item.remove();
+  });
+}
+
+// Создание нового сообщения
+newMessageForm.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+  
+  let messageText = newMessageInput.value; // Получаем текст из поля ввода  
+  let newMessage = newMessageTemplate.cloneNode(true); // Клонируем шаблон сообщения  
+  newMessage.querySelector('.chat-message-text').textContent = messageText;
+  
+  let delButton = newMessage.querySelector('.chat-message-button'); // Находим кнопку с крестиком
+  
+  chatContainer.appendChild(newMessage); // Добавляем сообщение на страницу  
+  deleteMessageHandler(delButton, newMessage); // Добавляем обработчик удаления сообщений по крестику  
+  newMessageInput.value = ''; // Чистим содержимое поля ввода
+});
+
+/*
+
 var chat = document.querySelector('.chat-form');
 var chatInput = chat.querySelector('.chat-form-input');
 var chatContent = document.querySelector('.chat-content');
@@ -24,7 +59,7 @@ var delMessage = function(message) {
     chatContent.removeChild(message);
   });
 }
-
+*/
 
 /*
 
