@@ -16,8 +16,6 @@ chat.addEventListener('submit', function(e) {
   delMessage(newMessage);
   chatContent.appendChild(newMessage);
   chatInput.value = '';  
-  
-  var allMessages = chatContent.children;
 });
 
 var delMessage = function(message) {
@@ -49,8 +47,6 @@ chat.addEventListener('submit', function(e) {
   delMessage(newMessage);
   chatContent.appendChild(newMessage);
   chatInput.value = '';  
-  
-  var allMessages = chatContent.children;
 });
 
 var delMessage = function(message) {
